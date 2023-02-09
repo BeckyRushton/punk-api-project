@@ -1,7 +1,7 @@
 import "./App.scss";
 import beers from "./data/beers";
 import Navbar from "../src/containers/Navbar/Navbar";
-import CardContainer from "../src/containers/CardContainer";
+import CardContainer from "../src/containers/CardContainer/CardContainer";
 
 import React from "react";
 
