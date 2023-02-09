@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+.beer-card {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  align-items: center;
+  height: 400px;
+  width: 260px;
+  gap: 10px;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px 20px;
+    height: 60%;
+    width: 230px;
+  }
+  &__bottom {
+    height: 40%;
+    width: 230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    gap: 10px;
+  }
+
+  &__top--percentage {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  &__top--image {
+    width: auto;
+    height: 100%;
+  }
+  &__bottom--name {
+    font-size: 1.3rem;
+  }
+  &__bottom--description {
+    font-size: 0.8rem;
+    overflow: hidden;
+    // text-overflow: ellipsis;
+  }
+}
