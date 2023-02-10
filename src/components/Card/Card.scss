@@ -21,9 +21,11 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 10px 20px;
-    height: 60%;
+    height: 10%;
     width: 230px;
+  }
+  &__middle {
+    height: 50%;
   }
   &__bottom {
     height: 40%;
@@ -32,7 +34,6 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    gap: 5px;
     gap: 10px;
     background-color: rgb(235, 235, 226);
     border-radius: 10px;
@@ -40,7 +41,7 @@
   }
 
   &__top--percentage {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
   }
 
@@ -55,6 +56,5 @@
   &__bottom--description {
     font-size: 0.8rem;
     overflow: hidden;
-    // text-overflow: ellipsis;
   }
 }
