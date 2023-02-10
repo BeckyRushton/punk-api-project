@@ -4,8 +4,8 @@ import FilterItems from "../../components/FilterItems/FilterItems";
 
 const FiltersList = () => {
   return (
-    <div>
-      FilteredList
+    <div className="filterBy">
+      Filter by:
       <FilterItems />
     </div>
   );

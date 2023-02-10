@@ -5,8 +5,7 @@ import FiltersList from "../../containers/FiltersList/FiltersList";
 
 const Navbar = () => {
   return (
-    <div>
-      Navbar
+    <div className="nav-section">
       <SearchBox />
       <FiltersList />
     </div>
