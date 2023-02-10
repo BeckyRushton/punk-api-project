@@ -55,6 +55,9 @@
   }
   &__bottom--description {
     font-size: 0.8rem;
+    width: 90%;
+    height: 200px;
     overflow: hidden;
+    white-space: normal;
   }
 }

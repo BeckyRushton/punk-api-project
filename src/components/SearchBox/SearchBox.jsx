@@ -1,11 +1,17 @@
 import React from "react";
 import "./SearchBox.scss";
 
-const SearchBox = () => {
+const SearchBox = (props) => {
+  const { handleSearch } = props;
   return (
     <div className="searchbarStyle">
       <label htmlFor="searchbar">Search:</label>
-      <input type="text" id="searchbar" />
+      <input
+        onInput={handleSearch}
+        type="text"
+        id="searchbar"
+        placeholder="Punk API Database"
+      />
     </div>
   );
 };

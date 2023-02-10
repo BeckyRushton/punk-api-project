@@ -1,6 +1,10 @@
 .nav-section {
   color: rgb(255, 255, 255);
-  margin: 10px 10px;
   padding: 20px;
-  background-color: rgb(45, 92, 30);
+  background-color: rgb(89, 105, 50);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 50px;
 }

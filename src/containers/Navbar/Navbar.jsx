@@ -1,12 +1,13 @@
-import React from "react";
 import "../Navbar/Navbar.scss";
 import SearchBox from "../../components/SearchBox/SearchBox";
 import FiltersList from "../../containers/FiltersList/FiltersList";
 
-const Navbar = () => {
+const Navbar = (props) => {
+  const { handleSearch } = props;
+
   return (
     <div className="nav-section">
-      <SearchBox />
+      <SearchBox handleSearch={handleSearch} />
       <FiltersList />
     </div>
   );
