@@ -3,12 +3,12 @@ import SearchBox from "../../components/SearchBox/SearchBox";
 import FiltersList from "../../containers/FiltersList/FiltersList";
 
 const Navbar = (props) => {
-  const { handleSearch } = props;
+  const { handleSearch, handleSelect } = props;
 
   return (
     <div className="nav-section">
       <SearchBox handleSearch={handleSearch} />
-      <FiltersList />
+      <FiltersList handleSelect={handleSelect} />
     </div>
   );
 };
