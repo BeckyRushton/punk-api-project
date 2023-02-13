@@ -31,3 +31,9 @@ My drawn visualisation of tree structure
 ![heiarchy of react.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0f187d87-3359-4f2c-bfe6-cfff441637d7/heiarchy_of_react.png)
 
 [https://punkapi.com/](https://punkapi.com/)
+
+To Do's
+
+- Add a multifunctional checkbox system
+- Reduce about to one sentence and then find out more
+- When click find out more, popup info card of the beer
