@@ -12,18 +12,47 @@
   box-shadow: 5px 5px 5px;
   background-color: white;
 
-  &__heading {
-    font-size: 1.4rem;
-    text-align: center;
-    font-weight: bold;
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 10%;
+    width: 230px;
+  }
+  &__middle {
+    height: 50%;
+  }
+  &__bottom {
+    height: 40%;
+    width: 230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    background-color: rgb(235, 235, 226);
+    border-radius: 10px;
+    padding: 5px 10px;
   }
 
-  &__abv {
+  &__top--percentage {
     font-size: 1.5rem;
     font-weight: bold;
   }
-  &__img {
+
+  &__top--image {
     width: auto;
-    height: 60%;
+    height: 100%;
+  }
+  &__bottom--name {
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+  &__bottom--description {
+    font-size: 0.8rem;
+    width: 90%;
+    height: 200px;
+    overflow: hidden;
+    white-space: normal;
   }
 }
