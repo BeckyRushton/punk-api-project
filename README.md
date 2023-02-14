@@ -36,4 +36,13 @@ To Do's
 
 - Add a multifunctional checkbox system
 - Reduce about to one sentence and then find out more
-- When click find out more, popup info card of the beer
+- When click find out more, open overlay to have all info
+- need a back button
+
+To use for url -
+const getBeers = async () => {
+const url = "";
+const res = await fetch(url);
+const data = await res.json();
+setUsers(data.results);
+};
