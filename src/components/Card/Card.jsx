@@ -4,6 +4,8 @@ import Button from "../Button/Button";
 
 const Card = (props) => {
   const { name, abv, description, image } = props;
+  const previewDescription = description.indexOf(".");
+
   return (
     <div className="beer-card">
       <div className="beer-card__top">
@@ -15,7 +17,10 @@ const Card = (props) => {
 
       <div className="beer-card__bottom">
         <h2 className="beer-card__bottom--name">{name}</h2>
-        <p className="beer-card__bottom--description">{description}</p>
+        <p className="beer-card__bottom--description">
+          {description.substring(0, previewDescription + 1)}
+        </p>
+        <Button buttonText={"Find out more..."} />
       </div>
     </div>
   );
