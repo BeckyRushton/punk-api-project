@@ -35,5 +35,3 @@ My drawn visualisation of tree structure
 To Do's
 
 - Add a multifunctional checkbox system
-- When click find out more, overlay with beer info and exit to homepage
-- need a back button

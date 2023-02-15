@@ -2,11 +2,11 @@ import React from "react";
 import "./FilterItems.scss";
 
 const FilterItems = (props) => {
-  const { handleSelect } = props;
+  const { handleAbvFilter, handleAcidicFilter, handleClassicFilter } = props;
   return (
     <div className="items">
       <input
-        onChange={handleSelect}
+        onChange={handleAbvFilter}
         type="checkbox"
         name="highABV"
         id="highABV"
@@ -14,7 +14,7 @@ const FilterItems = (props) => {
       <label htmlFor="highABV"> ABV higher than 6.0% </label>
 
       <input
-        onChange={handleSelect}
+        onChange={handleAcidicFilter}
         type="checkbox"
         name="acidic"
         id="acidic"
@@ -22,7 +22,7 @@ const FilterItems = (props) => {
       <label htmlFor="acidic"> Acidic more than ph4 </label>
 
       <input
-        onChange={handleSelect}
+        onChange={handleClassicFilter}
         type="checkbox"
         name="classicRange"
         id="classicRange"

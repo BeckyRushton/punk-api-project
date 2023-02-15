@@ -6,38 +6,68 @@ import { useState, useEffect } from "react";
 
 const App = () => {
   const [beersAPI, setBeersAPI] = useState([]);
-  const [filteredArr, setFilteredArr] = useState(beersAPI);
-
-  const getBeers = async () => {
-    const url = "https://api.punkapi.com/v2/beers";
-    const res = await fetch(url);
-    const data = await res.json();
-    setBeersAPI(data);
-  };
-
-  const getSearchBeers = async (searchTerm) => {
-    const url = `https://api.punkapi.com/v2/beers/?beer_name=${searchTerm}`;
-    const res = await fetch(url);
-    const data = await res.json();
-    setBeersAPI(data);
-  };
+  const [searchTerm, setSearchTerm] = useState("");
+  const [abvFilter, setAbvFilter] = useState(false);
+  const [acidicFilter, setAcidicFilter] = useState(false);
+  const [classicFilter, setClassicFilter] = useState(false);
 
   useEffect(() => {
     getBeers();
-  }, []);
+  }, [searchTerm, abvFilter, acidicFilter, classicFilter]);
+
+  const getBeers = async () => {
+    let url = "https://api.punkapi.com/v2/beers";
+
+    if (searchTerm || abvFilter || acidicFilter || classicFilter) {
+      url += "?";
+    }
+
+    if (searchTerm) {
+      url += `beer_name=${searchTerm}&`;
+    }
+
+    if (abvFilter) {
+      url += "abv_gt=6.0&";
+    }
+
+    if (classicFilter) {
+      url += "brewed_before=01-2010";
+    }
+
+    const res = await fetch(url);
+    let data = await res.json();
+
+    if (acidicFilter) {
+      data = data.filter((beer) => beer.ph > 4.0);
+    }
+
+    setBeersAPI(data);
+  };
 
   const handleSearch = (event) => {
-    const searchTerm = event.target.value.toLowerCase();
-    if (searchTerm) {
-      getSearchBeers(searchTerm);
-    } else {
-      getBeers();
-    }
+    setSearchTerm(event.target.value.toLowerCase());
+  };
+
+  const handleAbvFilter = (event) => {
+    setAbvFilter(event.target.checked);
+  };
+
+  const handleAcidicFilter = (event) => {
+    setAcidicFilter(event.target.checked);
+  };
+
+  const handleClassicFilter = (event) => {
+    setClassicFilter(event.target.checked);
   };
 
   return (
     <div className="app">
-      <Navbar handleSearch={handleSearch} />
+      <Navbar
+        handleSearch={handleSearch}
+        handleAbvFilter={handleAbvFilter}
+        handleAcidicFilter={handleAcidicFilter}
+        handleClassicFilter={handleClassicFilter}
+      />
       <Main beers={beersAPI} />
     </div>
   );

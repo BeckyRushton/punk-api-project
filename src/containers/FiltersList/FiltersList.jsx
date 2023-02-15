@@ -3,11 +3,15 @@ import "./FiltersList.scss";
 import FilterItems from "../../components/FilterItems/FilterItems";
 
 const FiltersList = (props) => {
-  const { handleSelect } = props;
+  const { handleAbvFilter, handleAcidicFilter, handleClassicFilter } = props;
   return (
     <div className="filterBy">
       Filter by:
-      <FilterItems handleSelect={handleSelect}/>
+      <FilterItems
+        handleAbvFilter={handleAbvFilter}
+        handleAcidicFilter={handleAcidicFilter}
+        handleClassicFilter={handleClassicFilter}
+      />
     </div>
   );
 };
