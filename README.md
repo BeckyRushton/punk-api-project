@@ -35,32 +35,5 @@ My drawn visualisation of tree structure
 To Do's
 
 - Add a multifunctional checkbox system
-- When click find out more, link to new page with beerid to have all info
+- When click find out more, overlay with beer info and exit to homepage
 - need a back button
-
-const filteredTerm = beersAPI.filter((beer) => {
-if (beer.name.toLowerCase().includes(searchTerm)) {
-return true;
-}
-});
-console.log(searchTerm);
-setFilteredArr(filteredTerm);
-
-const filteredBeers = beersAPI.filter((beer) => {
-return beer.abv > 6.0;
-});
-setFilteredArr(filteredBeers);
-} else if (event.target.id === "acidic" && event.target.checked) {
-const filteredBeers = beersAPI.filter((beer) => {
-return beer.ph > 4.0;
-});
-setFilteredArr(filteredBeers);
-} else if (event.target.id === "classicRange" && event.target.checked) {
-const filteredBeers = beersAPI.filter((beer) => {
-const beerArr = parseInt(beer.first_brewed.split("/")[1]);
-return beerArr < 2010;
-});
-setFilteredArr(filteredBeers);
-} else {
-setFilteredArr(beersAPI);
-}

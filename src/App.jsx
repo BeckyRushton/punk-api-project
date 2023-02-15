@@ -22,13 +22,6 @@ const App = () => {
     setBeersAPI(data);
   };
 
-  // const getCheckedBeers = async () => {
-  //   const url = `https://api.punkapi.com/v2/beers/`;
-  //   const res = await fetch(url + `?abv_gt=6`);
-  //   const data = await res.json();
-  //   setBeersAPI(data);
-  // };
-
   useEffect(() => {
     getBeers();
   }, []);
@@ -41,15 +34,6 @@ const App = () => {
       getBeers();
     }
   };
-  // const handleSelect = (event) => {
-  //   if (event.target.id === "highABV") {
-  //     abv = true;
-  //   }
-  //   const abv = event.target.id === "highABV";
-  //   const ph = event.target.id === "acidic";
-  //   const classic = event.target.id === "classicRange";
-  //   getBeers();
-  // };
 
   return (
     <div className="app">

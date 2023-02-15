@@ -1,29 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Card.scss";
 import Button from "../Button/Button";
+import whiteCross from "../../assets/images/white-cross.png";
 
 const Card = (props) => {
   const { name, abv, description, image } = props;
-  const previewDescription = description.indexOf(".");
+  const [showText, setShowText] = useState(false);
 
-  return (
-    <div className="beer-card">
-      <div className="beer-card__top">
-        <p className="beer-card__top--percentage">{abv}% abv</p>
-      </div>
-      <div className="beer-card__middle">
-        <img className="beer-card__top--image" src={image} alt={name} />
-      </div>
+  const handleClick = () => {
+    setShowText(!showText);
+  };
 
-      <div className="beer-card__bottom">
-        <h2 className="beer-card__bottom--name">{name}</h2>
-        <p className="beer-card__bottom--description">
-          {description.substring(0, previewDescription + 1)}
-        </p>
+  const buttonJSX = (
+    <div className="beer-card__content">
+      <h4 className="beer-card__content--abv">{abv}%</h4>
+      <div className="beer-card__content--imgContainer">
+        <img
+          src={image}
+          className="beer-card__content--image"
+          alt={props.name}
+        />
+      </div>
+      <h2 className="beer-card__content--name">{name}</h2>
+      <div className="beer-card__content--button" onClick={handleClick}>
         <Button buttonText={"Find out more..."} />
       </div>
     </div>
   );
+
+  const textJSX = (
+    <div className="beer-card__content beer-card__content--text">
+      <img
+        src={whiteCross}
+        className="beer-card__cross"
+        onClick={handleClick}
+        alt="Close text"
+      />
+      <h2 className="beer-card__name"> {name}</h2>
+      <h4 className="beer-card__abv">{abv}% abv</h4>
+      <p className="beer-card__description">{description}</p>
+    </div>
+  );
+
+  return <div className="beer-card">{showText ? textJSX : buttonJSX}</div>;
 };
 
 export default Card;
