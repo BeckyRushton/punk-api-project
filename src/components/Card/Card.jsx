@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Card.scss";
 import Button from "../Button/Button";
-import whiteCross from "../../assets/images/white-cross.png";
+import blackCross from "../../assets/images/black-cross.png";
 
 const Card = (props) => {
   const { name, abv, description, image } = props;
@@ -29,16 +29,18 @@ const Card = (props) => {
   );
 
   const textJSX = (
-    <div className="beer-card__content beer-card__content--text">
-      <img
-        src={whiteCross}
-        className="beer-card__cross"
-        onClick={handleClick}
-        alt="Close text"
-      />
-      <h2 className="beer-card__name"> {name}</h2>
-      <h4 className="beer-card__abv">{abv}% abv</h4>
-      <p className="beer-card__description">{description}</p>
+    <div className="beer-card__text ">
+      <div className="beer-card__text--crossContainer">
+        <img
+          src={blackCross}
+          className="beer-card__text--cross"
+          onClick={handleClick}
+          alt="Close text"
+        />
+      </div>
+      <h2 className="beer-card__text--name"> {name}</h2>
+      <h4 className="beer-card__text--abv">{abv}% abv</h4>
+      <p className="beer-card__text--description">{description}</p>
     </div>
   );
 

@@ -46,4 +46,36 @@
       align-items: flex-start;
     }
   }
+  &__text {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 30px auto 30px 1fr;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+
+    &--crossContainer {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 5px;
+    }
+
+    &--cross {
+      height: 100%;
+      cursor: pointer;
+    }
+    &--name {
+      font-size: 2rem;
+    }
+    &--abv {
+      font-size: 1.2rem;
+      font-style: italic;
+    }
+    &--description {
+      font-size: 1rem;
+      height: 100%;
+      overflow: auto;
+    }
+  }
 }
