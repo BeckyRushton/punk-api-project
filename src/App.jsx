@@ -39,7 +39,7 @@ const App = () => {
     }
 
     if (classicFilter) {
-      url += "brewed_before=01-2010";
+      url += "brewed_before=01-2010&";
     }
     // ph needed to be filtered manually as there is no exact term for ph in the
     // documentation

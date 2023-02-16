@@ -2,8 +2,7 @@ import React from "react";
 import "./CardContainer.scss";
 import Card from "../../components/Card/Card";
 
-const CardContainer = (props) => {
-  const { beers } = props;
+const CardContainer = ({ beers }) => {
   const beersJSX = beers.map((beer) => {
     return (
       <Card

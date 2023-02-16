@@ -1,8 +1,11 @@
 import React from "react";
 import "./FilterItems.scss";
 
-const FilterItems = (props) => {
-  const { handleAbvFilter, handleAcidicFilter, handleClassicFilter } = props;
+const FilterItems = ({
+  handleAbvFilter,
+  handleAcidicFilter,
+  handleClassicFilter,
+}) => {
   return (
     <div className="items">
       <input

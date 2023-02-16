@@ -3,8 +3,7 @@ import CardContainer from "../CardContainer/CardContainer";
 import "./Main.scss";
 import Title from "../../components/Title/Title";
 
-const Main = (props) => {
-  const { beers } = props;
+const Main = ({ beers }) => {
   return (
     <div className="main-section">
       <Title />

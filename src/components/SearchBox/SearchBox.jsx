@@ -1,8 +1,7 @@
 import React from "react";
 import "./SearchBox.scss";
 
-const SearchBox = (props) => {
-  const { handleSearch } = props;
+const SearchBox = ({ handleSearch }) => {
   return (
     <div className="searchbar-style">
       <label htmlFor="searchbar">Search:</label>

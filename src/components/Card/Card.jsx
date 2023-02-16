@@ -3,8 +3,7 @@ import "./Card.scss";
 import Button from "../Button/Button";
 import blackCross from "../../assets/images/black-cross.png";
 
-const Card = (props) => {
-  const { name, abv, description, image, ph } = props;
+const Card = ({ name, abv, description, image, ph }) => {
   const [showText, setShowText] = useState(false);
 
   const handleClick = () => {
@@ -15,11 +14,7 @@ const Card = (props) => {
     <div className="beer-card__content">
       <h4 className="beer-card__content--abv">{abv}%</h4>
       <div className="beer-card__content--imgContainer">
-        <img
-          src={image}
-          className="beer-card__content--image"
-          alt={props.name}
-        />
+        <img src={image} className="beer-card__content--image" alt={name} />
       </div>
       <h2 className="beer-card__content--name">{name}</h2>
       <div className="beer-card__content--button" onClick={handleClick}>
