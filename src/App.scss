@@ -1,9 +1,11 @@
+@import "./assets/styles/styles.scss";
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 .app {
-  background-color: rgb(160, 159, 150);
+  background-color: $main-colour;
   display: flex;
 }

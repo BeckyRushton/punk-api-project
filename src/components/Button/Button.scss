@@ -1,5 +1,6 @@
+@import "../../assets/styles/styles.scss";
 .button-style {
-  color: rgb(10, 129, 123);
+  color: $accent-colour;
   height: 20px;
   width: 150px;
   display: flex;

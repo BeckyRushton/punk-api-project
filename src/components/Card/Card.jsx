@@ -4,7 +4,7 @@ import Button from "../Button/Button";
 import blackCross from "../../assets/images/black-cross.png";
 
 const Card = (props) => {
-  const { name, abv, description, image } = props;
+  const { name, abv, description, image, ph } = props;
   const [showText, setShowText] = useState(false);
 
   const handleClick = () => {
@@ -40,6 +40,7 @@ const Card = (props) => {
       </div>
       <h2 className="beer-card__text--name"> {name}</h2>
       <h4 className="beer-card__text--abv">{abv}% abv</h4>
+      <h4 className="beer-card__text--ph">pH {ph}</h4>
       <p className="beer-card__text--description">{description}</p>
     </div>
   );

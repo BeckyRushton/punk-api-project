@@ -1,3 +1,4 @@
+@import "../../assets/styles/styles.scss";
 .main-section {
   display: flex;
   flex-direction: column;
@@ -8,5 +9,5 @@
   padding: 20px 10px;
   margin: 10px;
   width: 100%;
-  background-color: rgb(124, 124, 119);
+  background-color: $darker-main-colour;
 }

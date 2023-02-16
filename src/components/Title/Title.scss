@@ -1,6 +1,9 @@
+@import "../../assets/styles/styles.scss";
 .title {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 4rem;
   color: white;
   text-align: center;
+  font-family: $title-font;
+  font-weight: bold;
 }

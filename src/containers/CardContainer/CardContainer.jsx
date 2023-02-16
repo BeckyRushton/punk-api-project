@@ -11,6 +11,7 @@ const CardContainer = (props) => {
         image={beer.image_url}
         description={beer.description}
         abv={beer.abv}
+        ph={beer.ph}
         key={beer.id}
       />
     );
