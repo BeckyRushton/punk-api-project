@@ -25,9 +25,9 @@ const FilterItems = (props) => {
         onChange={handleClassicFilter}
         type="checkbox"
         name="classicRange"
-        id="classicRange"
+        id="classic-range"
       ></input>
-      <label htmlFor="classicRange"> Classic Punk API Range </label>
+      <label htmlFor="classic-range"> Classic Punk API Range </label>
     </div>
   );
 };

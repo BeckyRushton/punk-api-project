@@ -5,7 +5,7 @@ import FilterItems from "../../components/FilterItems/FilterItems";
 const FiltersList = (props) => {
   const { handleAbvFilter, handleAcidicFilter, handleClassicFilter } = props;
   return (
-    <div className="filterBy">
+    <div className="filter-by">
       Filter by:
       <FilterItems
         handleAbvFilter={handleAbvFilter}

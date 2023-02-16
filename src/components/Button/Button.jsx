@@ -4,7 +4,7 @@ import React from "react";
 const Button = (props) => {
   const { buttonText } = props;
 
-  return <div className="buttonStyle">{buttonText}</div>;
+  return <div className="button-style">{buttonText}</div>;
 };
 
 export default Button;

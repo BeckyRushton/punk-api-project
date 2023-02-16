@@ -28,10 +28,6 @@ Component tree for reference:
 ![component tree.jpg](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/22b5c620-63bc-43ec-8e2b-3c1887117c21/component_tree.jpg)
 
 My drawn visualisation of tree structure
-![heiarchy of react.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0f187d87-3359-4f2c-bfe6-cfff441637d7/heiarchy_of_react.png)
+![hiearchy of react.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0f187d87-3359-4f2c-bfe6-cfff441637d7/heiarchy_of_react.png)
 
 [https://punkapi.com/](https://punkapi.com/)
-
-To Do's
-
-- Add a multifunctional checkbox system
