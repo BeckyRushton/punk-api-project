@@ -13,22 +13,29 @@ const BeerInfo = ({ beers, handleClick }) => {
   });
 
   const targetObj = targetArr[0];
+  console.log(targetObj);
 
   return (
     <div className="beer-info-container">
-      <Link style={{ textDecoration: "none" }} to={"/"} key={name}>
-        <img
-          src={blackCross}
-          className="beer-info__cross"
-          onClick={handleClick}
-          alt="Close text"
-        />
-      </Link>
-      <div className="beer-info__title">{targetObj.name}</div>
-      <div className="beer-info__abv">{targetObj.abv} abv</div>
-      <div className="beer-info__ph">pH {targetObj.ph}</div>
-      <div className="beer-info__description">{targetObj.description}</div>
-      <div className="beer-info__image">{targetObj.image}</div>
+      <div className="beer-info-container__top">
+        <div className="beer-info__title">{targetObj.name}</div>
+        <Link style={{ textDecoration: "none" }} to={"/"} key={name}>
+          <img
+            src={blackCross}
+            className="beer-info__cross"
+            onClick={handleClick}
+            alt="Close text"
+          />
+        </Link>
+      </div>
+      <div className="beer-info-container__bottom">
+        <img src={targetObj.image_url} className="beer-info__image" />
+        <div className="beer-info-container__bottom--about">
+          <div className="beer-info__abv">{targetObj.abv} abv</div>
+          <div className="beer-info__ph">pH {targetObj.ph}</div>
+          <div className="beer-info__description">{targetObj.description}</div>
+        </div>
+      </div>
     </div>
   );
 };
