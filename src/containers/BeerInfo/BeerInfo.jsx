@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import blackCross from "../../assets/images/black-cross.png";
 import { Link } from "react-router-dom";
 
-const BeerInfo = ({ beers, handleClick }) => {
+const BeerInfo = ({ beers }) => {
   const { name } = useParams();
   const targetArr = beers.filter((beer) => {
     if (beer.name === name) {
@@ -19,12 +19,7 @@ const BeerInfo = ({ beers, handleClick }) => {
       <div className="beer-info-container__top">
         <div className="beer-info__title">{targetObj.name}</div>
         <Link style={{ textDecoration: "none" }} to={"/"} key={name}>
-          <img
-            src={blackCross}
-            className="beer-info__cross"
-            onClick={handleClick}
-            alt="Close text"
-          />
+          <img src={blackCross} className="beer-info__cross" alt="Close text" />
         </Link>
       </div>
       <div className="beer-info-container__bottom">
