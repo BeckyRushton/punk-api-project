@@ -13,7 +13,6 @@ const BeerInfo = ({ beers, handleClick }) => {
   });
 
   const targetObj = targetArr[0];
-  console.log(targetObj);
 
   return (
     <div className="beer-info-container">
@@ -31,7 +30,7 @@ const BeerInfo = ({ beers, handleClick }) => {
       <div className="beer-info-container__bottom">
         <img src={targetObj.image_url} className="beer-info__image" />
         <div className="beer-info-container__bottom--about">
-          <div className="beer-info__abv">{targetObj.abv} abv</div>
+          <div className="beer-info__abv">{targetObj.abv}% abv</div>
           <div className="beer-info__ph">pH {targetObj.ph}</div>
           <div className="beer-info__description">{targetObj.description}</div>
         </div>
