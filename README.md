@@ -1,15 +1,11 @@
-The aim of this project was to build a website using React that showcases all of PUNK API’s beers. It should also have a filter so you can see the beers based on three conditions.
+The aim of this project was to build a website using React that showcases all of PUNK API’s beers. It should also have a search filter and a checkbox filter that has three conditions.
 
 **Requirements:**
 
 - Built entirely in React
 - Repo on github
-- Use Punk API (after using date file first)
+- Use Punk API for beer data [https://punkapi.com/](https://punkapi.com/)
 - Test where possible (RTL)
-
-**Should look similar to this:**
-
-![punkApi.jpg](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/825c3fc7-adf6-4271-affa-83d8b3dc5c36/punkApi.jpg)
 
 **Plan:**
 
@@ -24,10 +20,13 @@ The aim of this project was to build a website using React that showcases all of
 
 4. Style the website however you see fit! Go wild!
 
-Component tree for reference:
-![component tree.jpg](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/22b5c620-63bc-43ec-8e2b-3c1887117c21/component_tree.jpg)
+Dev notes from app - these explain my logic in app.jsx
 
-My drawn visualisation of tree structure
-![hiearchy of react.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0f187d87-3359-4f2c-bfe6-cfff441637d7/heiarchy_of_react.png)
-
-[https://punkapi.com/](https://punkapi.com/)
+- Setting the states of all the following to false/empty so that there are no filters on the beer API.
+- This waits for the following to trigger a re-render of the beers API with relevant filter (stops infinite re-rendering).
+- This gets an unfiltered aray of beers from the API as default.
+- If one of these filters is used, the url has the question mark added onto it.
+- If its one of the following filters, then the relevant section of url code is added.
+- ph needed to be filtered manually as there is no exact term for ph in the documentation.
+- Returns relevant beers from the API to whichever filter/or no filter has been triggered.
+- These target the event of typing in the search bar and checking the checkbox.
