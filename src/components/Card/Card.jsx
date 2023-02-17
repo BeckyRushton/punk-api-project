@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Card.scss";
 import Button from "../Button/Button";
 import blackCross from "../../assets/images/black-cross.png";
+import { Link } from "react-router-dom";
 
 const Card = ({ name, abv, description, image, ph }) => {
   const [showText, setShowText] = useState(false);
@@ -37,6 +38,9 @@ const Card = ({ name, abv, description, image, ph }) => {
       <h4 className="beer-card__text--abv">{abv}% abv</h4>
       <h4 className="beer-card__text--ph">pH {ph}</h4>
       <p className="beer-card__text--description">{description}</p>
+      <Link style={{ textDecoration: "none" }} to={`/beer/${name}`} key={name}>
+        <Button buttonText={"Go to beer page"} />
+      </Link>
     </div>
   );
 

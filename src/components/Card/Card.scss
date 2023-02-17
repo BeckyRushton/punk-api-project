@@ -10,7 +10,7 @@
   width: 260px;
   gap: 10px;
   border-radius: 10px;
-  box-shadow: 5px 5px 5px;
+  box-shadow: $second-accent-colour 5px 5px 5px;
   background-color: rgb(238, 237, 237);
 
   &__content {
@@ -54,7 +54,7 @@
   &__text {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 30px auto 30px 30px 1fr;
+    grid-template-rows: 30px auto 30px 30px 1fr 20px;
     height: 100%;
     width: 100%;
     padding: 10px;

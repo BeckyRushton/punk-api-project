@@ -3,6 +3,8 @@ import Navbar from "../src/containers/Navbar/Navbar";
 import Main from "./containers/Main/Main";
 import React from "react";
 import { useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import BeerInfo from "./containers/BeerInfo/BeerInfo";
 
 const App = () => {
   // Setting the states of all the following to false/empty so that
@@ -71,15 +73,30 @@ const App = () => {
   };
 
   return (
-    <div className="app">
-      <Navbar
-        handleSearch={handleSearch}
-        handleAbvFilter={handleAbvFilter}
-        handleAcidicFilter={handleAcidicFilter}
-        handleClassicFilter={handleClassicFilter}
-      />
-      <Main beers={beersAPI} />
-    </div>
+    <Router>
+      <div className="app">
+        <Routes>
+          <Route
+            path={"/"}
+            element={
+              <>
+                <Navbar
+                  handleSearch={handleSearch}
+                  handleAbvFilter={handleAbvFilter}
+                  handleAcidicFilter={handleAcidicFilter}
+                  handleClassicFilter={handleClassicFilter}
+                />
+                <Main beers={beersAPI} />
+              </>
+            }
+          ></Route>
+          <Route
+            path={"/beer/:name"}
+            element={<BeerInfo beers={beersAPI} />}
+          ></Route>
+        </Routes>
+      </div>
+    </Router>
   );
 };
 
